@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body style="background-color: rgb(240, 208, 90);">
+
+    </body>
+
+
+<center>
+<title>Tax Calculator</title>
+
+
+<!-- Change the const takRate = to whatver the tax rate in whatver state-->
+
+<script>
+    function calculateTax() {
+      const income = parseFloat(document.getElementById("income").value);
+      const taxRate = 0.10;             
+      const taxAmount = income * taxRate;
+      const totalIncome = income + taxAmount;
+      
+      document.getElementById("taxAmount").textContent = taxAmount.toFixed(2);
+      document.getElementById("totalIncome").textContent = totalIncome.toFixed(2);
+    }
+    </script>
+    </head>
+
+
+<!--TYPE UNDER THIS LINE-->
+<body>
+
+    <h1>Tax Calculator</h1>
+
+    <div>
+        <label for="income">Enter Amount:</label>
+        <input type="number" id="income" step="any" placeholder="Enter your income" />
+        <button onclick="calculateTax()">Calculate Tax</button>
+      </div>
+
+
+<div>
+    <p>Tax Amount: $<span id="taxAmount">0.00</span></p>
+    <p>Total Amount after Tax: $<span id="totalIncome">0.00</span></p>
+  </div>
+
+
+
+  <img src="tax.jpg" alt="Your Image" width="600" height="320">
+</center>
+
+
+
+</body>
+</html>
